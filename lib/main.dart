@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/components/startup_screen.dart';
+import 'package:music_player/components/splash_screen.dart';
+import 'package:music_player/screens/home_screen.dart';
+import 'package:music_player/utilities/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: StartupScreen(),
+      home: SplashScreen(),
+      routes: <String, WidgetBuilder>{
+        SPLASH_SCREEN: (BuildContext context) => SplashScreen(),
+        HOME_SCREEN: (BuildContext context) => HomeScreen(),
+        //GRID_ITEM_DETAILS_SCREEN: (BuildContext context) => GridItemDetails(),
+      },
     );
   }
 }
