@@ -19,6 +19,7 @@ class _SearchScreenState extends State<SearchScreen> {
           color: kSecondaryColor,
           margin: const EdgeInsets.all(20),
           child: const TextField(
+            style: TextStyle(color: Colors.white),
             textAlign: TextAlign.left,
             decoration: InputDecoration(
                 hintStyle: TextStyle(
