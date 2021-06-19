@@ -17,45 +17,38 @@ class _SearchScreenState extends State<SearchScreen> {
       body: SafeArea(
         child: Container(
           color: kSecondaryColor,
-          margin: EdgeInsets.all(20),
-          child: TextField(
+          margin: const EdgeInsets.all(20),
+          child: const TextField(
             textAlign: TextAlign.left,
             decoration: InputDecoration(
-              hintStyle: TextStyle(
-                color: Colors.white,
-              ),
-              hintText: 'Search for Music',
-              contentPadding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                borderSide: BorderSide(
-                  width: 0,
-                  style: BorderStyle.none,
+                hintStyle: TextStyle(
+                  color: Colors.white,
                 ),
-              ),
-              enabledBorder: OutlineInputBorder(
+                hintText: 'Search for Music',
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30.0)),
                   borderSide: BorderSide(
                     width: 0,
                     style: BorderStyle.none,
                   ),
-                  borderRadius: BorderRadius.all(Radius.circular(30.0))
-              ),
-              focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 0,
-                    style: BorderStyle.none,
-                  ),
-                  borderRadius: BorderRadius.all(Radius.circular(30.0))
-
-              )
-
-
-            ),
-
+                ),
+                enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 0,
+                      style: BorderStyle.none,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(30.0))),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 2.0,
+                      style: BorderStyle.none,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(30.0)))),
           ),
         ),
       ),
     );
   }
 }
-

@@ -3,16 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:music_player/utilities/style.dart';
 
 // ignore: use_key_in_widget_constructors
-// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
+  // ignore: unused_field
   final bool _isPlaying = false;
   String play = 'play_arrow_rounded';
-
-  final  List<Icon> iconsImage =
-  [Icon(Icons.sentiment_very_dissatisfied),
-    Icon(Icons.home),
-    Icon(Icons.drafts),
-    Icon(Icons.backspace)];
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +14,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: kPrimaryColor,
       body: SafeArea(
         child: Container(
-          margin: EdgeInsets.all(20.0),
+          margin: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -45,9 +39,6 @@ class HomeScreen extends StatelessWidget {
               ),
               Expanded(
                 flex: 4,
-
-
-
                 // ignore: prefer_const_literals_to_create_immutables
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
