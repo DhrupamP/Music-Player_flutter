@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:music_player/utilities/style.dart';
+import 'package:music_player/components/navigation_bar.dart';
 
 // ignore: use_key_in_widget_constructors
 class HomeScreen extends StatelessWidget {
@@ -88,81 +90,84 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
 
-              Expanded(
-                flex: 1,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: kSecondaryColor,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(15.0),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: kSecondaryColor,
-                        ),
-                        child: const Icon(
-                          Icons.list_rounded,
-                          color: Colors.white,
-                          size: 30.0,
-                        ),
-                        onPressed: () {
-                          print('Clicked List Button');
-                        },
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: kSecondaryColor,
-                        ),
-                        child: const Icon(
-                          Icons.equalizer_rounded,
-                          color: Colors.white,
-                          size: 30.0,
-                        ),
-                        onPressed: () {
-                          print('Clicked Equalizer Button');
-                        },
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: kSecondaryColor,
-                        ),
-                        child: const Icon(
-                          Icons.manage_search_rounded,
-                          color: Colors.white,
-                          size: 30.0,
-                        ),
-                        onPressed: () {
-                          print('Clicked Search Button');
-                        },
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: kSecondaryColor,
-                        ),
-                        child: const Icon(
-                          Icons.settings,
-                          color: Colors.white,
-                          size: 30.0,
-                        ),
-                        onPressed: () {
-                          print('Clicked settings Button');
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              // Expanded(
+              //   flex: 1,
+              //   child: Container(
+              //     decoration: const BoxDecoration(
+              //       color: kSecondaryColor,
+              //       borderRadius: BorderRadius.all(
+              //         Radius.circular(15.0),
+              //       ),
+              //     ),
+              //     child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //       crossAxisAlignment: CrossAxisAlignment.stretch,
+              //       children: [
+              //         ElevatedButton(
+              //           style: ElevatedButton.styleFrom(
+              //             primary: kSecondaryColor,
+              //           ),
+              //           child: const Icon(
+              //             Icons.list_rounded,
+              //             color: Colors.white,
+              //             size: 30.0,
+              //           ),
+              //           onPressed: () {
+              //             print('Clicked List Button');
+              //           },
+              //         ),
+              //         ElevatedButton(
+              //           style: ElevatedButton.styleFrom(
+              //             primary: kSecondaryColor,
+              //           ),
+              //           child: const Icon(
+              //             Icons.equalizer_rounded,
+              //             color: Colors.white,
+              //             size: 30.0,
+              //           ),
+              //           onPressed: () {
+              //             print('Clicked Equalizer Button');
+              //           },
+              //         ),
+              //         ElevatedButton(
+              //           style: ElevatedButton.styleFrom(
+              //             primary: kSecondaryColor,
+              //           ),
+              //           child: const Icon(
+              //             Icons.manage_search_rounded,
+              //             color: Colors.white,
+              //             size: 30.0,
+              //           ),
+              //           onPressed: () {
+              //             print('Clicked Search Button');
+              //           },
+              //         ),
+              //         ElevatedButton(
+              //           style: ElevatedButton.styleFrom(
+              //             primary: kSecondaryColor,
+              //           ),
+              //           child: const Icon(
+              //             Icons.settings,
+              //             color: Colors.white,
+              //             size: 30.0,
+              //           ),
+              //           onPressed: () {
+              //             print('Clicked settings Button');
+              //           },
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
 
             ],
           ),
         ),
       ),
+      bottomNavigationBar: NavigationBar(),
     );
   }
 }
+
+//
 
