@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:music_player/utilities/style.dart';
 import 'package:music_player/components/navigation_bar.dart';
@@ -164,7 +163,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: NavigationBar(),
+      bottomNavigationBar: const NavigationBar(),
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:music_player/components/splash_screen.dart';
 import 'package:music_player/screens/home_screen.dart';
 import 'package:music_player/utilities/constants.dart';
-import 'screens/search_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,10 +17,7 @@ class MyApp extends StatelessWidget {
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
         SPLASH_SCREEN: (BuildContext context) => SplashScreen(),
-
-        HOME_SCREEN: (BuildContext context) => const SearchScreen(),
-
-
+        HOME_SCREEN: (BuildContext context) => HomeScreen(),
         //GRID_ITEM_DETAILS_SCREEN: (BuildContext context) => GridItemDetails(),
       },
     );
