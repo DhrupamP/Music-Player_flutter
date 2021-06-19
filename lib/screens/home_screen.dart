@@ -8,10 +8,16 @@ class HomeScreen extends StatelessWidget {
   final bool _isPlaying = false;
   String play = 'play_arrow_rounded';
 
+  final  List<Icon> iconsImage =
+  [Icon(Icons.sentiment_very_dissatisfied),
+    Icon(Icons.home),
+    Icon(Icons.drafts),
+    Icon(Icons.backspace)];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primaryColor,
+      backgroundColor: kPrimaryColor,
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.all(20.0),
@@ -25,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                 flex: 5,
                 child: Container(
                   decoration: const BoxDecoration(
-                    color: secondaryColor,
+                    color: kSecondaryColor,
                     borderRadius: BorderRadius.all(Radius.circular(20.0)),
                   ),
                   child: const Center(
@@ -39,6 +45,9 @@ class HomeScreen extends StatelessWidget {
               ),
               Expanded(
                 flex: 4,
+
+
+
                 // ignore: prefer_const_literals_to_create_immutables
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -87,11 +96,12 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+
               Expanded(
                 flex: 1,
                 child: Container(
                   decoration: const BoxDecoration(
-                    color: secondaryColor,
+                    color: kSecondaryColor,
                     borderRadius: BorderRadius.all(
                       Radius.circular(15.0),
                     ),
@@ -102,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: secondaryColor,
+                          primary: kSecondaryColor,
                         ),
                         child: const Icon(
                           Icons.list_rounded,
@@ -115,7 +125,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: secondaryColor,
+                          primary: kSecondaryColor,
                         ),
                         child: const Icon(
                           Icons.equalizer_rounded,
@@ -128,7 +138,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: secondaryColor,
+                          primary: kSecondaryColor,
                         ),
                         child: const Icon(
                           Icons.manage_search_rounded,
@@ -141,7 +151,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: secondaryColor,
+                          primary: kSecondaryColor,
                         ),
                         child: const Icon(
                           Icons.settings,
@@ -156,6 +166,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
+
             ],
           ),
         ),
@@ -163,3 +174,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
