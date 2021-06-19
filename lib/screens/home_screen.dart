@@ -22,6 +22,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               // ignore: sized_box_for_whitespace
               Expanded(
+                flex: 5,
                 child: Container(
                   decoration: const BoxDecoration(
                     color: secondaryColor,
@@ -37,6 +38,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Expanded(
+                flex: 4,
                 // ignore: prefer_const_literals_to_create_immutables
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -85,8 +87,75 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              bottomNavigationBar: BottomNavigationBar(
-                items: const <BottomNavigationBarItem(icon: )),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: secondaryColor,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15.0),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: secondaryColor,
+                        ),
+                        child: const Icon(
+                          Icons.list_rounded,
+                          color: Colors.white,
+                          size: 30.0,
+                        ),
+                        onPressed: () {
+                          print('Clicked List Button');
+                        },
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: secondaryColor,
+                        ),
+                        child: const Icon(
+                          Icons.equalizer_rounded,
+                          color: Colors.white,
+                          size: 30.0,
+                        ),
+                        onPressed: () {
+                          print('Clicked Equalizer Button');
+                        },
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: secondaryColor,
+                        ),
+                        child: const Icon(
+                          Icons.manage_search_rounded,
+                          color: Colors.white,
+                          size: 30.0,
+                        ),
+                        onPressed: () {
+                          print('Clicked Search Button');
+                        },
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: secondaryColor,
+                        ),
+                        child: const Icon(
+                          Icons.settings,
+                          color: Colors.white,
+                          size: 30.0,
+                        ),
+                        onPressed: () {
+                          print('Clicked settings Button');
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
