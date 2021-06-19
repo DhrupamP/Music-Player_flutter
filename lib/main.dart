@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
         SPLASH_SCREEN: (BuildContext context) => SplashScreen(),
-        HOME_SCREEN: (BuildContext context) => HomeScreen(),
+        HOME_SCREEN: (BuildContext context) => SearchScreen(),
         //GRID_ITEM_DETAILS_SCREEN: (BuildContext context) => GridItemDetails(),
       },
     );
