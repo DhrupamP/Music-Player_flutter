@@ -35,41 +35,44 @@ class _NavigationBarState extends State<NavigationBar> {
       backgroundColor: kPrimaryColor,
       body: children[_selectedIndex],
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(15)),
 
-        ),
 
         margin: EdgeInsets.all(20),
-        child: BottomNavigationBar(
-          selectedFontSize: 0.0,
-          unselectedFontSize: 0.0,
+        child: ClipRRect(
+          borderRadius: BorderRadius.all(Radius.circular(20)),
+          child: BottomNavigationBar(
+            selectedFontSize: 0.0,
+            unselectedFontSize: 0.0,
 
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              backgroundColor: kSecondaryColor,
-              icon: Icon(Icons.list_rounded,size: 35),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              backgroundColor: kSecondaryColor,
-              icon: Icon(Icons.equalizer_rounded,size: 35,),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              backgroundColor: kSecondaryColor,
-              icon: Icon(Icons.manage_search,size: 35),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              backgroundColor: kSecondaryColor,
-              icon: Icon(Icons.settings,size: 35),
-              label: '',
-            ),
-          ],
-          currentIndex: _selectedIndex,
-          fixedColor: Colors.blueAccent,
-          onTap: onTabTapped,
+            items: <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                backgroundColor: kSecondaryColor,
+                icon: Icon(Icons.list_rounded,size: 35),
+                label: '',
+              ),
+              BottomNavigationBarItem(
+                backgroundColor: kSecondaryColor,
+                icon: Icon(Icons.equalizer_rounded,size: 35,),
+                label: '',
+              ),
+              BottomNavigationBarItem(
+                backgroundColor: kSecondaryColor,
+                icon: Icon(Icons.manage_search,size: 35),
+                label: '',
+              ),
+              BottomNavigationBarItem(
+                backgroundColor: kSecondaryColor,
+                icon: Icon(Icons.settings,size: 35),
+                label: '',
+              ),
+            ],
+            currentIndex: _selectedIndex,
+            fixedColor: Colors.blueAccent,
+            unselectedItemColor: Colors.white,
+            type: BottomNavigationBarType.fixed,
+            onTap: onTabTapped,
+            backgroundColor: kSecondaryColor,
+          ),
         ),
 
 // >>>>>>> Stashed changes
