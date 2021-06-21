@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:music_player/utilities/constants.dart';
 import 'package:music_player/utilities/style.dart';
-import 'package:music_player/components/navigation_bar.dart';
 
 // ignore: use_key_in_widget_constructors
 class HomeScreen extends StatelessWidget {
