@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:music_player/utilities/constants.dart';
+import 'package:music_player/components/navigation_bar.dart';
 
 // ignore: use_key_in_widget_constructors
 class SplashScreen extends StatefulWidget {
@@ -22,7 +23,7 @@ class SplashScreenState extends State<SplashScreen>
   }
 
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed(HOME_SCREEN);
+    Navigator.of(context).pushReplacementNamed(NAVIGATION_BAR);
   }
 
   @override

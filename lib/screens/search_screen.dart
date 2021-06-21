@@ -16,9 +16,11 @@ class _SearchScreenState extends State<SearchScreen> {
       backgroundColor: kPrimaryColor,
       body: SafeArea(
         child: Container(
+
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(90.0)),
           ),
+
           margin: const EdgeInsets.all(20),
           child: const TextField(
             style: TextStyle(color: Colors.white),

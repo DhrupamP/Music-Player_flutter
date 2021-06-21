@@ -90,80 +90,81 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
 
-              Expanded(
-                flex: 1,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: kSecondaryColor,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(15.0),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: kSecondaryColor,
-                        ),
-                        child: const Icon(
-                          Icons.list_rounded,
-                          color: Colors.white,
-                          size: 30.0,
-                        ),
-                        onPressed: () {
-                          print('Clicked List Button');
-                        },
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: kSecondaryColor,
-                        ),
-                        child: const Icon(
-                          Icons.equalizer_rounded,
-                          color: Colors.white,
-                          size: 30.0,
-                        ),
-                        onPressed: () {
-                          print('Clicked Equalizer Button');
-                        },
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: kSecondaryColor,
-                        ),
-                        child: const Icon(
-                          Icons.manage_search_rounded,
-                          color: Colors.white,
-                          size: 30.0,
-                        ),
-                        onPressed: () {
-                          // print('Clicked Search Button');
-                          Navigator.pushNamed(context, SEARCH_SCREEN);
-                        },
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: kSecondaryColor,
-                        ),
-                        child: const Icon(
-                          Icons.settings,
-                          color: Colors.white,
-                          size: 30.0,
-                        ),
-                        onPressed: () {
-                          print('Clicked settings Button');
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              // Expanded(
+              //   flex: 1,
+              //   child: Container(
+              //     decoration: const BoxDecoration(
+              //       color: kSecondaryColor,
+              //       borderRadius: BorderRadius.all(
+              //         Radius.circular(15.0),
+              //       ),
+              //     ),
+              //     child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //       crossAxisAlignment: CrossAxisAlignment.stretch,
+              //       children: [
+              //         ElevatedButton(
+              //           style: ElevatedButton.styleFrom(
+              //             primary: kSecondaryColor,
+              //           ),
+              //           child: const Icon(
+              //             Icons.list_rounded,
+              //             color: Colors.white,
+              //             size: 30.0,
+              //           ),
+              //           onPressed: () {
+              //             print('Clicked List Button');
+              //           },
+              //         ),
+              //         ElevatedButton(
+              //           style: ElevatedButton.styleFrom(
+              //             primary: kSecondaryColor,
+              //           ),
+              //           child: const Icon(
+              //             Icons.equalizer_rounded,
+              //             color: Colors.white,
+              //             size: 30.0,
+              //           ),
+              //           onPressed: () {
+              //             print('Clicked Equalizer Button');
+              //           },
+              //         ),
+              //         ElevatedButton(
+              //           style: ElevatedButton.styleFrom(
+              //             primary: kSecondaryColor,
+              //           ),
+              //           child: const Icon(
+              //             Icons.manage_search_rounded,
+              //             color: Colors.white,
+              //             size: 30.0,
+              //           ),
+              //           onPressed: () {
+              //             // print('Clicked Search Button');
+              //             Navigator.pushNamed(context, SEARCH_SCREEN);
+              //           },
+              //         ),
+              //         ElevatedButton(
+              //           style: ElevatedButton.styleFrom(
+              //             primary: kSecondaryColor,
+              //           ),
+              //           child: const Icon(
+              //             Icons.settings,
+              //             color: Colors.white,
+              //             size: 30.0,
+              //           ),
+              //           onPressed: () {
+              //             print('Clicked settings Button');
+              //           },
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
       ),
+
       // bottomNavigationBar: const NavigationBar(),
     );
   }

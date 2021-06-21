@@ -1,27 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/components/navigation_bar.dart';
 import 'package:music_player/components/splash_screen.dart';
+import 'package:music_player/screens/list_screen.dart';
 import 'package:music_player/screens/home_screen.dart';
 import 'package:music_player/screens/search_screen.dart';
 import 'package:music_player/utilities/constants.dart';
+import 'utilities/style.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
         SPLASH_SCREEN: (BuildContext context) => SplashScreen(),
+
         HOME_SCREEN: (BuildContext context) => HomeScreen(),
         SEARCH_SCREEN: (BuildContext context) => const SearchScreen(),
+        LIST_SCREEN: (BuildContext context) =>  ListScreen(),
+        NAVIGATION_BAR: (BuildContext context) => NavigationBar(),
+
+      }
+
         //GRID_ITEM_DETAILS_SCREEN: (BuildContext context) => GridItemDetails(),
-      },
+
     );
   }
 }
