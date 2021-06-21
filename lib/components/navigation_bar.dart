@@ -35,7 +35,6 @@ class _NavigationBarState extends State<NavigationBar> {
       backgroundColor: kPrimaryColor,
       body: children[_selectedIndex],
       bottomNavigationBar: Container(
-
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(15)),
 
@@ -49,26 +48,27 @@ class _NavigationBarState extends State<NavigationBar> {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               backgroundColor: kSecondaryColor,
-              icon: Icon(Icons.list_rounded,color: Colors.white,size: 35),
+              icon: Icon(Icons.list_rounded,size: 35),
               label: '',
             ),
             BottomNavigationBarItem(
               backgroundColor: kSecondaryColor,
-              icon: Icon(Icons.equalizer_rounded,color: Colors.white,size: 35,),
+              icon: Icon(Icons.equalizer_rounded,size: 35,),
               label: '',
             ),
             BottomNavigationBarItem(
               backgroundColor: kSecondaryColor,
-              icon: Icon(Icons.manage_search, color: Colors.white,size: 35),
+              icon: Icon(Icons.manage_search,size: 35),
               label: '',
             ),
             BottomNavigationBarItem(
               backgroundColor: kSecondaryColor,
-              icon: Icon(Icons.settings,color: Colors.white,size: 35),
+              icon: Icon(Icons.settings,size: 35),
               label: '',
             ),
           ],
           currentIndex: _selectedIndex,
+          fixedColor: Colors.blueAccent,
           onTap: onTabTapped,
         ),
 
