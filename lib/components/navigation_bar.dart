@@ -31,15 +31,13 @@ class _NavigationBarState extends State<NavigationBar> {
       backgroundColor: kPrimaryColor,
       body: children[_selectedIndex],
       bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(15.0)),
-        ),
         margin: const EdgeInsets.all(20),
         child: ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(35.0)),
+          borderRadius: const BorderRadius.all(Radius.circular(20)),
           child: BottomNavigationBar(
             selectedFontSize: 0.0,
             unselectedFontSize: 0.0,
+
             // ignore: prefer_const_literals_to_create_immutables
             items: <BottomNavigationBarItem>[
               const BottomNavigationBarItem(
@@ -68,7 +66,10 @@ class _NavigationBarState extends State<NavigationBar> {
             ],
             currentIndex: _selectedIndex,
             fixedColor: Colors.blueAccent,
+            unselectedItemColor: Colors.white,
+            type: BottomNavigationBarType.fixed,
             onTap: onTabTapped,
+            backgroundColor: kSecondaryColor,
           ),
         ),
       ),
